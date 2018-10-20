@@ -59,28 +59,32 @@ public class AutonomousCommand extends Command {
     	   System.err.println("autoEx ran");
         //while(timer.get() <= 3) {
         	Robot.driveTrain.differentialDrive1.arcadeDrive(-0.7,0);//drive "forward"
-        	// (speed/output from motor,rotation angle)
-        	}
-    	
-    ;
-		//if(timer.get()==6&&gameData.charAt(0)=='L'&&side==1){
-    		//Robot.claw.clawOpen();
-    	//}
-		//else if(timer.get()==6&&gameData.charAt(0)=='R'&&side==2) {
-			//Robot.claw.clawOpen();
-		//}
-        }
-       // while(timer.get() <= (time + 2)) {
-        	//Robot.driveTrain.differentialDrive1.arcadeDrive(0, 0.5); //rotate
-        	//time = timer.get();
-        //}
-       // while(timer.get() <= (time + 10)) {
-        	//Robot.driveTrain.differentialDrive1.arcadeDrive(0, 0); //don't move
-       // }
-    //}
-
-    // Make this return true when this Command no longer needs to run execute()
-    @Override
+ 
+	}
+	    
+	    else if(timer.get()<=5) {
+		    Robot.driveTrain.differentialDrive1.arcadeDrive(0,0.5);
+		    
+	}
+	    else if(timer.get()<=8) {
+		    Robot.driveTrain.differentialDrive1.arcadeDrive(-0.7,0);
+	}
+	    
+	    else if(timer.get()<=9) {
+		    Robot.driveTrain.differentialDrive1.arcadeDrive(0,0.5)
+	    }
+	    
+	    else if(timer.get()<=13) {
+		    Robot.driveTrain.differentialDrive1.arcadeDrive(-0.7,0);
+	    }
+	    
+	    else if(timer.get()<=14) {
+		    Robot.driveTrain.differentialDrive1.arcadeDrive(0,0.5);
+		   
+	    }
+	    
+	    else if(timer.get()<=
+		
     protected boolean isFinished() {
         return false;
     }
