@@ -83,8 +83,19 @@ public class AutonomousCommand extends Command {
 		   
 	    }
 	    
-	    else if(timer.get()<=
+	    else if(timer.get()<=17) {
+		    Robot.driveTrain.differentialDrive1.arcadeDrive(-0.7,0);
 		
+	    }
+	    
+	    else if(timer.get()=0) {
+		    Robot.driveTrain.differentialDrive1.arcadeDrive(0,0);
+		    
+	    }
+	    
+	
+	    
+		     
     protected boolean isFinished() {
         return false;
     }
